@@ -32,7 +32,7 @@ public class CmdMove implements CommandInterface {
 
                 if ( (i2 > 1.0f) || (i2 < -1.0f) || !(directions.contains(i)) ) {
                     String message = AdvancedArmorStandsMain.getInstance().getMessageString("wrong_command_usage", player.getLocale());
-                    player.sendMessage(ChatColor.RED + message + ChatColor.AQUA + " /aa move <coordinate (x, y or z)> <distance (-1 to 1)>");
+                    player.sendMessage(ChatColor.RED + message + ChatColor.AQUA + " /aa move <x/y/z> <distance>");
                 } else {
 
                     if (i.equals("x")) {x = i2;}
@@ -64,7 +64,7 @@ public class CmdMove implements CommandInterface {
             else {
 
                 String message = AdvancedArmorStandsMain.getInstance().getMessageString("wrong_command_usage", player.getLocale());
-                player.sendMessage(ChatColor.RED + message + ChatColor.AQUA + " /aa move <coordinate (x, y or z)> <distance (-1 to 1)>");
+                player.sendMessage(ChatColor.RED + message + ChatColor.AQUA + " /aa move <x/y/z> <distance>");
 
             }
 
