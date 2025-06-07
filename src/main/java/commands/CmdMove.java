@@ -24,11 +24,11 @@ public class CmdMove implements CommandInterface {
 
                 String directions = "xyz";
                 String i = args[1].substring(0, 1);
-                Float i2 = Float.parseFloat(args[2]);
+                float i2 = Float.parseFloat(args[2]);
 
-                Float x = 0.0f;
-                Float y = 0.0f;
-                Float z = 0.0f;
+                float x = 0.0f;
+                float y = 0.0f;
+                float z = 0.0f;
 
                 if ( (i2 > 1.0f) || (i2 < -1.0f) || !(directions.contains(i)) ) {
                     String message = AdvancedArmorStandsMain.getInstance().getMessageString("wrong_command_usage", player.getLocale());
@@ -51,7 +51,7 @@ public class CmdMove implements CommandInterface {
                                     armorstand.getLocation().getY() + y, armorstand.getLocation().getZ() + z
                             );
 
-                            Float armorStandYaw = armorstand.getLocation().getYaw();
+                            float armorStandYaw = armorstand.getLocation().getYaw();
                             newLocation.setYaw(armorStandYaw);
                             armorstand.teleport(newLocation);
                             String message = AdvancedArmorStandsMain.getInstance().getMessageString("tp_success", player.getLocale());
